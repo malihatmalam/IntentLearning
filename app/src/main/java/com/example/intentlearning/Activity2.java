@@ -18,6 +18,7 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+
         mReply = findViewById(R.id.edit_text_reply);
 
         Intent intent = getIntent();
@@ -35,9 +36,9 @@ public class Activity2 extends AppCompatActivity {
 
         String reply = mReply.getText().toString();
 
-        Intent replyintent = new Intent();
-        replyintent.putExtra(EXTRA_REPLY, reply);
-        setResult(RESULT_OK,replyintent);
+        Intent replyIntent = new Intent();
+        replyIntent.putExtra(EXTRA_REPLY, reply);
+        setResult(RESULT_OK,replyIntent);
         finish();
 
 

@@ -40,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == TEXT_REQUEST){
+        if (requestCode == TEXT_REQUEST){
             if (resultCode == RESULT_OK){
                 String reply = data.getStringExtra(Activity2.EXTRA_REPLY);
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
+                Log.d(LOG_TAG,"Kirim Reply");
             }
         }
     }
